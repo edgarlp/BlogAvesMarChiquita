@@ -248,3 +248,24 @@ img {
         padding-top: 2.5rem;
     }
 }
+/* ===== Galería de fotos ===== */
+
+.photo-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1.5rem;
+    margin-top: 2rem;
+}
+
+.photo-table td {
+    vertical-align: middle;
+}
+
+.photo-table img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    max-height: 260px;
+}
