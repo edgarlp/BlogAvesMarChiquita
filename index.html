@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
     <!-- Barra superior -->
     <header class="main-header">
         <div class="container header-content">
@@ -85,23 +87,24 @@
             realizadas por los estudiantes en torno a las aves de la Laguna Mar Chiquita.
         </p>
 
-        <table class="photo-table">
-            <tr>
-                <td><img src="img/a.jpg" alt="Foto A - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/b.jpg" alt="Foto B - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/c.jpg" alt="Foto C - Aves de la Laguna Mar Chiquita"></td>
-            </tr>
-            <tr>
-                <td><img src="img/d.jpg" alt="Foto D - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/e.jpg" alt="Foto E - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/f.jpg" alt="Foto F - Aves de la Laguna Mar Chiquita"></td>
-            </tr>
-            <tr>
-                <td><img src="img/g.jpg" alt="Foto G - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/h.jpg" alt="Foto H - Aves de la Laguna Mar Chiquita"></td>
-                <td><img src="img/i.jpg" alt="Foto I - Aves de la Laguna Mar Chiquita"></td>
-            </tr>
-        </table>
+       <table class="photo-table">
+    <tr>
+        <td><img src="img/a.jpg" alt="Foto A - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/a.jpg')"></td>
+        <td><img src="img/b.jpg" alt="Foto B - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/b.jpg')"></td>
+        <td><img src="img/c.jpg" alt="Foto C - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/c.jpg')"></td>
+    </tr>
+    <tr>
+        <td><img src="img/d.jpg" alt="Foto D - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/d.jpg')"></td>
+        <td><img src="img/e.jpg" alt="Foto E - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/e.jpg')"></td>
+        <td><img src="img/f.jpg" alt="Foto F - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/f.jpg')"></td>
+    </tr>
+    <tr>
+        <td><img src="img/g.jpg" alt="Foto G - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/g.jpg')"></td>
+        <td><img src="img/h.jpg" alt="Foto H - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/h.jpg')"></td>
+        <td><img src="img/i.jpg" alt="Foto I - Aves de la Laguna Mar Chiquita" onclick="openLightbox('img/i.jpg')"></td>
+    </tr>
+</table>
+
     </div>
 </section>
 
@@ -358,8 +361,25 @@
             </p>
             <p class="small">
                 Proyecto escolar para la valoración de la biodiversidad y el cuidado de los humedales.
+                Espacios curriculares trabajados: ✅️ Sistemas Operativos y Software de Aplicación. ✅️Club de Ciencias. ✅️Club de Arte
             </p>
         </div>
     </footer>
+    <script>
+    function openLightbox(imgSrc) {
+        document.getElementById("lightbox-img").src = imgSrc;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+</script>
+
+    <!-- Lightbox para ampliar imágenes -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
 </body>
 </html>
